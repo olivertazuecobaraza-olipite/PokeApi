@@ -3,6 +3,8 @@ package com.oliver.pokepractica.infraestructure.controller.pokemon;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -19,8 +21,9 @@ import com.oliver.pokepractica.Application.mapper.pokemon.MapperPokemon;
 import com.oliver.pokepractica.domain.enty.pokemon.Pokemon;
 import com.oliver.pokepractica.infraestructure.service.pokemon.PokemonService;
 
-@RestController
+@RestController("PokemonController")
 @RequestMapping("/api/pokemon")
+@CrossOrigin(origins = "*")
 public class PokemonController {
     
     // Dependencias
@@ -51,7 +54,9 @@ public class PokemonController {
     public PokemonDto getPokemonById(@PathVariable Long id) {
         return MapperPokemon.toDto(pokemonService.findById(id));
     }
+    
     @GetMapping("/get/all")
+    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     public List<PokemonDto> getAllPokemon() {
         return pokemonService.findAll().stream().map(MapperPokemon::toDto).toList();
     }

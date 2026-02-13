@@ -1,6 +1,6 @@
-package com.oliver.pokepractica.Application.mapper.type;
+package com.oliver.pokepractica.application.mapper.type;
 
-import com.oliver.pokepractica.Application.dto.type.TypeDto;
+import com.oliver.pokepractica.application.dto.type.TypeDto;
 import com.oliver.pokepractica.domain.enty.type.Type;
 
 public class MapperType {

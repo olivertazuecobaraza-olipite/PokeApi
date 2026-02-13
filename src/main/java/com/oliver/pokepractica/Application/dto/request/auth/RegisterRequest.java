@@ -1,6 +1,9 @@
-package com.oliver.pokepractica.Application.dto.request;
+package com.oliver.pokepractica.application.dto.request.auth;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Setter @Getter
 @NoArgsConstructor @AllArgsConstructor

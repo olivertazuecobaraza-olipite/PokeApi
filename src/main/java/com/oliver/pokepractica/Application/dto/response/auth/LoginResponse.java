@@ -1,4 +1,4 @@
-package com.oliver.pokepractica.Application.dto.response;
+package com.oliver.pokepractica.application.dto.response.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

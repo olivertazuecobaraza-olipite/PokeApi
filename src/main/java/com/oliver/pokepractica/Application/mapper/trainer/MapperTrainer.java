@@ -1,6 +1,6 @@
-package com.oliver.pokepractica.Application.mapper.trainer;
+package com.oliver.pokepractica.application.mapper.trainer;
 
-import com.oliver.pokepractica.Application.dto.trainer.TrainerDto;
+import com.oliver.pokepractica.application.dto.trainer.TrainerDto;
 import com.oliver.pokepractica.domain.enty.trainer.Trainer;
 
 public class MapperTrainer {

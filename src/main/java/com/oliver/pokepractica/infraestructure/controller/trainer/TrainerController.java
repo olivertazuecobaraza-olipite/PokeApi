@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.oliver.pokepractica.Application.dto.trainer.TrainerDto;
-import com.oliver.pokepractica.Application.mapper.trainer.MapperTrainer;
+import com.oliver.pokepractica.application.dto.trainer.TrainerDto;
+import com.oliver.pokepractica.application.mapper.trainer.MapperTrainer;
 import com.oliver.pokepractica.domain.enty.pokemon.Pokemon;
 import com.oliver.pokepractica.infraestructure.service.trainer.TrainerService;
 

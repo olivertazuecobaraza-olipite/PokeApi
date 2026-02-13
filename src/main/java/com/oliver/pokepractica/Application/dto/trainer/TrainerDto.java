@@ -1,4 +1,4 @@
-package com.oliver.pokepractica.Application.dto.trainer;
+package com.oliver.pokepractica.application.dto.trainer;
 
 import com.oliver.pokepractica.domain.enums.Region;
 

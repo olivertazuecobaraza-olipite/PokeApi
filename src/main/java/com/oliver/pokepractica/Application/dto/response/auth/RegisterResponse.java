@@ -1,10 +1,13 @@
-package com.oliver.pokepractica.Application.dto.response;
+package com.oliver.pokepractica.application.dto.response.auth;
 
 import java.util.Set;
 
 import com.oliver.pokepractica.domain.enums.Role;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Setter @Getter
 @NoArgsConstructor @AllArgsConstructor

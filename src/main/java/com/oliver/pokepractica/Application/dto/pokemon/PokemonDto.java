@@ -1,4 +1,4 @@
-package com.oliver.pokepractica.Application.dto.pokemon;
+package com.oliver.pokepractica.application.dto.pokemon;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

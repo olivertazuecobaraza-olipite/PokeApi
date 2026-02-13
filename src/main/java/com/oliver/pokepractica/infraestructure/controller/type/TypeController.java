@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.oliver.pokepractica.Application.dto.type.TypeDto;
-import com.oliver.pokepractica.Application.mapper.type.MapperType;
+import com.oliver.pokepractica.application.dto.type.TypeDto;
+import com.oliver.pokepractica.application.mapper.type.MapperType;
 import com.oliver.pokepractica.infraestructure.service.type.TypeService;
 
 

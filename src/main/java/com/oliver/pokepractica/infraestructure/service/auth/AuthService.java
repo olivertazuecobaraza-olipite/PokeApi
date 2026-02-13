@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.oliver.pokepractica.Application.dto.request.LoginRequest;
-import com.oliver.pokepractica.Application.dto.request.RegisterRequest;
-import com.oliver.pokepractica.Application.dto.response.LoginResponse;
-import com.oliver.pokepractica.Application.dto.response.RegisterResponse;
+import com.oliver.pokepractica.application.dto.request.auth.LoginRequest;
+import com.oliver.pokepractica.application.dto.request.auth.RegisterRequest;
+import com.oliver.pokepractica.application.dto.response.auth.LoginResponse;
+import com.oliver.pokepractica.application.dto.response.auth.RegisterResponse;
 import com.oliver.pokepractica.domain.enty.user.Usuario;
 import com.oliver.pokepractica.domain.enums.Role;
 import com.oliver.pokepractica.infraestructure.repository.usuario.UsuarioRepository;

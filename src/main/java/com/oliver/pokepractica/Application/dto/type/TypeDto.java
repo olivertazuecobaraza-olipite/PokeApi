@@ -1,4 +1,4 @@
-package com.oliver.pokepractica.Application.dto.type;
+package com.oliver.pokepractica.application.dto.type;
 
 import com.oliver.pokepractica.domain.enums.NameType;
 

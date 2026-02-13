@@ -1,6 +1,6 @@
-package com.oliver.pokepractica.Application.mapper.pokemon;
+package com.oliver.pokepractica.application.mapper.pokemon;
 
-import com.oliver.pokepractica.Application.dto.pokemon.PokemonDto;
+import com.oliver.pokepractica.application.dto.pokemon.PokemonDto;
 import com.oliver.pokepractica.domain.enty.pokemon.Pokemon;
 
 public class MapperPokemon {

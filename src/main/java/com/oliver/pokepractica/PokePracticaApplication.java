@@ -5,8 +5,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
 
 @SpringBootApplication
@@ -15,17 +13,6 @@ public class PokePracticaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(PokePracticaApplication.class, args);
 	}
-
-	// Desactiva la seguridad para que no pida autenticación en ningún endpoint
-	/*
-	@Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http
-            .csrf(csrf -> csrf.disable()) // Forma correcta con Lambda DSL
-            .authorizeHttpRequests(auth -> auth.anyRequest().permitAll()); // Permite todo
-        return http.build();
-    }
-	*/
 	
 
 	// Listado de endpoint hecho por ChatGpt -> Lo ordena alfabeticamente por ruta
@@ -45,7 +32,7 @@ public class PokePracticaApplication {
 			String formatoFila = "| %-" + wMetodo + "s | %-" + wRuta + "s | %-" + wHandler + "s |%n";
 
 			System.out.println("\n" + lineaHorizontal);
-			System.out.printf(formatoFila, "MÉTODO", "RUTA", "HANDLER");
+			System.out.printf(formatoFila, "METODO", "RUTA", "HANDLER");
 			System.out.println(lineaHorizontal);
 
 			RequestMappingHandlerMapping mapping = context.getBean(RequestMappingHandlerMapping.class);

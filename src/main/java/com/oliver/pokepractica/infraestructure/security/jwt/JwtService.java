@@ -1,22 +1,20 @@
 package com.oliver.pokepractica.infraestructure.security.jwt;
 
+import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.security.Keys;
-import jakarta.annotation.PostConstruct;
-
-import java.security.Key;
-import java.util.List;
-
 import com.oliver.pokepractica.domain.enty.user.Usuario;
 
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.security.Keys;
+import jakarta.annotation.PostConstruct;
 
 @Service
 public class JwtService {
@@ -55,6 +53,7 @@ public class JwtService {
     }
 
     // Extrarct Roles
+    @SuppressWarnings("unchecked")
     public List<String> extractRoles(String token) {
         return (List<String>) parseClaims(token).get("roles");
     }

@@ -23,7 +23,7 @@ import com.oliver.pokepractica.infraestructure.service.trainer.TrainerService;
 
 
 @RestController
-@RequestMapping("/api/trainers")
+@RequestMapping("/api/trainer")
 public class TrainerController {
     
     @Autowired
@@ -32,26 +32,26 @@ public class TrainerController {
 
 // CRUD
     // POST
-    @PostMapping("/post")
+    @PostMapping("/")
     public TrainerDto postMethodName(@RequestBody TrainerDto trainerDto) {
         return MapperTrainer.toDto(trainerService.save(MapperTrainer.toEntity(trainerDto)));
     }
     // PUT
-    @PutMapping("/put/{id}")
+    @PutMapping("/{id}")
     public TrainerDto putMethodName(@PathVariable Long id, @RequestBody TrainerDto dto) {
         return MapperTrainer.toDto(trainerService.update(MapperTrainer.toEntity(dto),id));
     }
     // DELETE
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public void deleteMethodName(@PathVariable Long id) {
         trainerService.deleteById(id);
     }
     // GET
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     public TrainerDto getById(@PathVariable Long id) {
         return MapperTrainer.toDto(trainerService.findById(id));
     }
-    @GetMapping("/get/all")
+    @GetMapping("/")
     public List<TrainerDto> getAll() {
         return trainerService.findAll().stream().map(MapperTrainer::toDto).toList();    
     }
@@ -61,13 +61,13 @@ public class TrainerController {
 
 // GET
     // Obtener el equipo del entrenador
-    @GetMapping("/get/{id}/team")
-    public Pokemon[] getTeam(@PathVariable Long id) {
+    @GetMapping("/team/{idTr}")
+    public Pokemon[] getTeam(@PathVariable Long idTr) {
         return null;
     }
     
-    @GetMapping("/get/{id}/strongest")
-    public Pokemon getStrongest(@PathVariable Long id) {
+    @GetMapping("/strongest/{idTr}")
+    public Pokemon getStrongest(@PathVariable Long idTr) {
         return null;
     }
     

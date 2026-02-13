@@ -26,26 +26,26 @@ public class TypeController {
 
     // CRUD
 // POST
-    @PostMapping("/post")
+    @PostMapping("/")
     public TypeDto postType(@RequestBody TypeDto dto) {
         return MapperType.toDto(typeService.save(MapperType.toEntity(dto)));
     }
 // PUT
-    @PutMapping("put/{id}")
+    @PutMapping("/{id}")
     public TypeDto putMethodName(@PathVariable Long id, @RequestBody TypeDto dto) {
         return MapperType.toDto(typeService.update(MapperType.toEntity(dto), id));
     }
 // DELETE
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/{id}")
     public void deleteType(@PathVariable Long id) {
         typeService.deleteById(id);
     }
 // GET
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     public TypeDto getMethodName(@PathVariable Long id) {
         return MapperType.toDto(typeService.findById(id));
     }
-    @GetMapping("/get/all")
+    @GetMapping("/")
     public List<TypeDto> getAllType() {
         return typeService.findAll().stream().map(MapperType::toDto).toList();
     } 
